@@ -1,4 +1,4 @@
-import { environment } from "../../environments/environment";
+import { JsonQues } from "../../assets/ques.js";
 import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-handler",
@@ -46,7 +46,7 @@ export class HandlerComponent implements OnInit {
     this.submitted = false;
     this.rightQues = 0;
     this.wrongQues = 0;
-    this.questions = environment.ques.map(x => Object.assign({}, x));
+    this.questions = JsonQues.ques.map(x => Object.assign({}, x));
     this.showPogress = false;
   }
 }
