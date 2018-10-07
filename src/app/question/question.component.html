@@ -1,0 +1,13 @@
+<div class="container" [ngClass]="{'invalid':!form.valid}">
+  <div class="label">{{question.question}}</div>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form-option">
+    <div [formGroup]="form">
+      <div *ngFor="let option of question.options">
+        <label [for]="option">
+          <input type="radio" [id]="option" [value]="option" formControlName="option" [(ngModel)]="question.givenAns">
+          {{option}}
+        </label>
+      </div>
+    </div>
+  </form>
+</div>

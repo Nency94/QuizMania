@@ -1,0 +1,20 @@
+<div class="common-div">
+  <div *ngIf="!showPogress" [ngClass]="{'reset':submitted }">
+    <h1 class="button-center">Quiz</h1>
+    <div *ngFor="let values of questions; let i = index">
+      <app-question [question]="values"></app-question>
+    </div>
+
+    <div class="button-center">
+      <button class="button" (click)="onSubmit()">Submit</button>
+      <button class="button" (click)="reset()">Reset</button>
+    </div>
+  </div>
+
+  <div *ngIf="showPogress">
+    <app-graph [right]="rightQues" [wrong]="wrongQues"></app-graph>
+    <div class="button-center">
+      <button class="button" (click)="reset()">Play Again !!!</button>
+    </div>
+  </div>
+</div>

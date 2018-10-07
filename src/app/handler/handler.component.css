@@ -1,0 +1,42 @@
+.listQues {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 89px;
+  padding: 0;
+  position: relative;
+}
+
+.listQues li {
+  padding: 13px 16px;
+  border-radius: 50%;
+  font-weight: 900;
+  text-align: center;
+  background-color: #ddd;
+  color: #fff;
+  border: 5px solid #ddd;
+  z-index: 9;
+}
+
+.listQues:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+.common-div {
+  width: 90vw;
+  margin: auto;
+}
+
+.listQues li.active {
+  background-color: #252323;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+}

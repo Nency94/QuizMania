@@ -1,0 +1,9 @@
+.graph-size canvas {
+  width: 80vw !important;
+  margin: auto;
+  height: auto !important;
+}
+
+* {
+  text-align: center;
+}
